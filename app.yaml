@@ -1,0 +1,21 @@
+command:
+  - "python"
+  - "-m"
+  - "streamlit"
+  - "run"
+  - "ui/main.py"
+  - "--server.port"
+  - "8000"
+  - "--server.address"
+  - "0.0.0.0"
+  - "--server.headless"
+  - "true"
+  - "--browser.gatherUsageStats"
+  - "false"
+env:
+  - name: PYTHONPATH
+    value: "."
+  - name: APP_MODE
+    value: "databricks_app"
+  - name: DATABRICKS_SERVERLESS_COMPUTE_ID
+    value: "auto"
